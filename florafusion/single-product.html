@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PlantLover - Landscaping and Gardening Bootstrap 5 HTML Template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;500;600;700&family=Over+the+Rainbow&display=swap" rel="stylesheet">
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#header-nav">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Menu</title>
+        <path fill="currentColor" d="M4 7v2h24V7zm0 8v2h24v-2zm0 8v2h24v-2z"/>
+      </symbol>
+      <symbol id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Close</title>
+        <path fill="currentColor" d="M7.219 5.781L5.78 7.22L14.563 16L5.78 24.781l1.44 1.439L16 17.437l8.781 8.782l1.438-1.438L17.437 16l8.782-8.781L24.78 5.78L16 14.563z"/>
+      </symbol>
+      <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Search</title>
+        <path fill="currentColor" d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z" />
+      </symbol>
+      <symbol id="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>User</title>
+        <path fill="currentColor" d="M16 5c-3.855 0-7 3.145-7 7c0 2.41 1.23 4.55 3.094 5.813C8.527 19.343 6 22.883 6 27h2c0-4.43 3.57-8 8-8s8 3.57 8 8h2c0-4.117-2.527-7.656-6.094-9.188A7.024 7.024 0 0 0 23 12c0-3.855-3.145-7-7-7zm0 2c2.773 0 5 2.227 5 5s-2.227 5-5 5s-5-2.227-5-5s2.227-5 5-5z" />
+      </symbol>
+      <symbol id="like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Like</title>
+        <path fill="currentColor" d="M9.5 5C5.363 5 2 8.402 2 12.5c0 1.43.648 2.668 1.25 3.563a9.25 9.25 0 0 0 1.219 1.468L15.28 28.375l.719.719l.719-.719L27.53 17.531S30 15.355 30 12.5C30 8.402 26.637 5 22.5 5c-3.434 0-5.645 2.066-6.5 2.938C15.145 7.066 12.934 5 9.5 5zm0 2c2.988 0 5.75 2.906 5.75 2.906l.75.844l.75-.844S19.512 7 22.5 7c3.043 0 5.5 2.496 5.5 5.5c0 1.543-1.875 3.625-1.875 3.625L16 26.25L5.875 16.125s-.484-.465-.969-1.188C4.422 14.216 4 13.274 4 12.5C4 9.496 6.457 7 9.5 7z" />
+      </symbol>
+      <symbol id="shopping-bag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Shopping Cart</title>
+        <path fill="currentColor" d="M16 3c-2.746 0-5 2.254-5 5v1H6.062L6 9.938l-1 18L4.937 29h22.125L27 27.937l-1-18L25.937 9H21V8c0-2.746-2.254-5-5-5zm0 2a3 3 0 0 1 3 3v1h-6V8a3 3 0 0 1 3-3zm-8.063 6H11v3h2v-3h6v3h2v-3h3.063l.875 16H7.063z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="plus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="check" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18.71 7.21a1 1 0 0 0-1.42 0l-7.45 7.46l-3.13-3.14A1 1 0 1 0 5.29 13l3.84 3.84a1 1 0 0 0 1.42 0l8.16-8.16a1 1 0 0 0 0-1.47Z"/>
+      </symbol>
+    </svg>
+
+    <header id="header-wrap" class="align-items-center position-sticky top-0 bg-white px-3">
+
+      <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid">
+          <div class="col-md-3">
+            <div class="main-logo">
+              <a href="index.html">
+                <img src="images/main-logo.png" alt="main-logo">
+              </a>
+            </div>
+          </div>
+
+          <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><svg class="menu" width="24" height="24"><use xlink:href="#menu" /></svg></button>
+          
+          <!-- off canvas -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body justify-content-end">
+
+              <div class="col-md-6">
+                <ul id="header-nav" class="navbar-nav justify-content-center d-flex flex-grow-1 list-unstyled text-uppercase">
+                  <li class="nav-item pe-5">
+                    <a href="#" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#about" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#popular-products" class="nav-link">Shop</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#recent-collections" class="nav-link">Collection</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#latest-blog" class="nav-link">Blogs</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="home-alternative.html" class="dropdown-item" href="#scrollspyHeading3">Home v2<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="about.html" class="dropdown-item" href="#scrollspyHeading3">About<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="blog.html" class="dropdown-item" href="#scrollspyHeading4">Blog<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="single-post.html" class="dropdown-item" href="#scrollspyHeading5">Single Post<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="shop.html" class="dropdown-item" href="#scrollspyHeading5">Shop<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="single-product.html" class="dropdown-item" href="#scrollspyHeading5">Single Product<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                      <li><a href="checkout.html" class="dropdown-item" href="#scrollspyHeading5">Checkout<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                      <li><a href="cart.html" class="dropdown-item" href="#scrollspyHeading5">Cart<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                                            <li><a href="contact.html" class="dropdown-item" href="#scrollspyHeading5">Contact<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="faq.html" class="dropdown-item" href="#scrollspyHeading5">FAQs<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="styles.html" class="dropdown-item" href="#scrollspyHeading5">Styles<span class="badge bg-primary ms-2">PRO</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item ">
+                    <a href="https://templatesjungle.gumroad.com/l/plantlover-bootstrap-html-template" target="_blank"  class="nav-link fw-bold">GETPRO</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <!-- / off canvas -->
+
+          <div class="col-md-3">
+            <div class="right-block d-flex justify-content-end">
+              <div id="search-bar" class="border-right me-2 pe-1">
+                <form action="" autocomplete="on">
+                <input id="search" name="search" type="text" placeholder="What're we looking for ?">
+                <button type="submit">
+                  <svg class="search" width="24" height="24">
+                    <use xlink:href="#search" />
+                  </svg>
+                </button>
+                </form>
+              </div>
+              <div class="user-items d-flex gap-3">
+                <a href="#">
+                  <svg class="user" width="24" height="24"><use xlink:href="#user" /></svg>
+                </a>
+                <a href="#">
+                  <svg class="like" width="24" height="24"><use xlink:href="#like" /></svg>
+                </a>
+                <a href="cart.html">
+                  <svg class="shopping-bag" width="24" height="24"><use xlink:href="#shopping-bag" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="breadcrumbs">
+            <span class="item">
+              <a href="index.html">Home /</a>
+            </span>
+            <span class="item">
+              <a href="shop.html">Shop /</a>
+            </span>
+            <span class="item">Shop Single</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="product-detail" class="single-product py-5 no-padding-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-3">
+                <!-- product-thumbnail-slider -->
+                <div class="swiper product-thumbnail-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/product-thumbnail-1.jpg" alt="" class="thumb-image img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product-thumbnail-2.jpg" alt="" class="thumb-image img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product-thumbnail-3.jpg" alt="" class="thumb-image img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product-thumbnail-4.jpg" alt="" class="thumb-image img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <!-- / product-thumbnail-slider -->
+              </div>
+              <div class="col-md-9">
+                <!-- product-large-slider -->
+                <div class="swiper product-large-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/product-large-1.jpg" alt="product-large" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product-large-2.jpg" alt="product-large" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product-large-3.jpg" alt="product-large" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product-large-4.jpg" alt="product-large" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <!-- / product-large-slider -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="product-info ps-4">
+              <div class="element-header">
+                <h3 itemprop="name" class="product-title no-margin">Cane plants</h3>
+                <div class="rating-container d-flex align-items-center">
+                  <div class="rating" data-rating="1" onclick=rate(1)>
+                    <i class="icon icon-star"></i>
+                  </div>
+                  <div class="rating" data-rating="2" onclick=rate(1)>
+                    <i class="icon icon-star"></i>
+                  </div>
+                  <div class="rating" data-rating="3" onclick=rate(1)>
+                    <i class="icon icon-star"></i>
+                  </div>
+                  <div class="rating" data-rating="4" onclick=rate(1)>
+                    <i class="icon icon-star"></i>
+                  </div>
+                  <div class="rating" data-rating="5" onclick=rate(1)>
+                    <i class="icon icon-star-line"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="product-price">
+                <strong class="text-dark">$36.00</strong>
+                <del>$54.00</del>
+              </div>
+              <p>Justo, cum feugiat imperdiet nulla molestie ac vulputate scelerisque amet. Bibendum adipiscing platea blandit sit sed quam semper rhoncus. Diam ultrices maecenas consequat eu tortor orci, cras lectus mauris, cras egestas quam venenatis neque.</p>
+              <div class="cart-wrap padding-small">
+                <div class="color-options product-select">
+                  <div class="color-toggle" data-option-index="0">
+                    <h4 class="item-title no-margin">Color:</h4>
+                    <ul class="select-list list-unstyled d-flex">
+                      <li class="select-item" data-val="Green" title="Green">
+                        <a href="#">Green</a>
+                      </li>
+                      <li class="select-item" data-val="Orange" title="Orange">
+                        <a href="#">Orange</a>
+                      </li>
+                      <li class="select-item" data-val="Red" title="Red">
+                        <a href="#">Red</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swatch product-select" data-option-index="1">
+                  <h4 class="item-title no-margin">Size:</h4>
+                  <ul class="select-list list-unstyled d-flex">
+                    <li data-value="S" class="select-item">
+                      <a href="#">S</a>
+                    </li>
+                    <li data-value="M" class="select-item">
+                      <a href="#">M</a>
+                    </li>
+                    <li data-value="L" class="select-item">
+                      <a href="#">L</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="product-quantity">
+                  <div class="item-title mb-3">
+                    <strong>2 in stock</strong>
+                  </div>
+                  <div class="stock-button-wrap">
+                    <div class="product-quantity d-flex">
+                      <h4 class="item-title no-margin pe-3">Quantity:</h4>                
+                      <div class="qty-field d-flex">
+                        <div class="qty-number d-flex justify-content-start align-items-center">
+                            <div class="decriment-button border">-</div>
+                              <input class="spin-number-output border" type="text" readonly value="0">
+                            <div class="incriment-button border">+</div>
+                        </div>
+                      </div>
+                      <button type="submit" name="add" id="add-to-cart" class="btn btn-dark text-uppercase">
+                        <span id="add-to-cart">Add to cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="meta-product padding-small">
+                <div class="meta-item d-flex align-items-baseline">
+                  <h4 class="item-title no-margin">SKU:</h4>
+                  <ul class="select-list list-unstyled d-flex">
+                    <li data-value="S" class="select-item">1223</li>
+                  </ul>
+                </div>
+                <div class="meta-item d-flex align-items-baseline">
+                  <h4 class="item-title no-margin">Category:</h4>
+                  <ul class="select-list list-unstyled d-flex">
+                    <li data-value="S" class="select-item">
+                      <a href="#">Room Plant</a>,
+                    </li>
+                    <li data-value="S" class="select-item">
+                      <a href="#">Succulent</a>,
+                    </li>
+                    <li data-value="S" class="select-item">
+                      <a href="#">Flower</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="meta-item d-flex align-items-baseline">
+                  <h4 class="item-title no-margin">Tags:</h4>
+                  <ul class="select-list list-unstyled d-flex">
+                    <li data-value="S" class="select-item">
+                      <a href="#">Classic</a>,
+                    </li>
+                    <li data-value="S" class="select-item">
+                      <a href="#">Winter</a>,
+                    </li>
+                    <li data-value="S" class="select-item">
+                      <a href="#">Modern</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product-tabs">
+      <div class="container">
+        <div class="row">
+          <div class="tabs-listing">
+            <nav>
+              <div class="nav nav-tabs d-flex flex-wrap justify-content-center" id="nav-tab" role="tablist">
+                <button class="nav-link active text-capitalize" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Description</button>
+                <button class="nav-link text-capitalize" id="nav-information-tab" data-bs-toggle="tab" data-bs-target="#nav-information" type="button" role="tab" aria-controls="nav-information" aria-selected="false">Additional information</button>
+                <button class="nav-link text-capitalize" id="nav-review-tab" data-bs-toggle="tab" data-bs-target="#nav-review" type="button" role="tab" aria-controls="nav-review" aria-selected="false">Reviews</button>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active border-bottom padding-small" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <p>Product Description</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.</p>
+                <p>Photo by <a href="https://unsplash.com/es/@feeypflanzen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">feey</a> on <a href="https://unsplash.com/@feeypflanzen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </p>
+                <ul style="list-style-type:disc;" class="list-unstyled">
+                  <li>Donec nec justo eget felis facilisis fermentum.</li>
+                  <li>Suspendisse urna viverra non, semper suscipit pede.</li>
+                  <li>Aliquam porttitor mauris sit amet orci.</li>
+                </ul> 
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. </p>
+              </div>
+              <div class="tab-pane fade border-bottom padding-small" id="nav-information" role="tabpanel" aria-labelledby="nav-information-tab">
+                <p>It is Comfortable and Best</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div class="tab-pane fade border-bottom padding-small" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
+                <div class="review-box d-flex">
+                  <div class="review-item d-flex">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="image-holder">
+                          <img src="images/reviewer-1.jpg" alt="review">
+                        </div>
+                      </div>
+                      <div class="col-md-7">
+                        <div class="review-content">
+                          <div class="rating-container d-flex align-items-center">
+                            <div class="rating" data-rating="1" onclick="rate(1)">
+                              <i class="icon icon-star"></i>
+                            </div>
+                            <div class="rating" data-rating="2" onclick="rate(1)">
+                              <i class="icon icon-star"></i>
+                            </div>
+                            <div class="rating" data-rating="3" onclick="rate(1)">
+                              <i class="icon icon-star"></i>
+                            </div>
+                            <div class="rating" data-rating="4" onclick="rate(1)">
+                              <i class="icon icon-star-half"></i>
+                            </div>
+                            <div class="rating" data-rating="5" onclick="rate(1)">
+                              <i class="icon icon-star-empty"></i>
+                            </div>
+                            <span class="rating-count">(3.5)</span>
+                          </div>
+                          <div class="review-header">
+                            <span class="author-name">Tina Johnson</span>
+                            <span class="review-date">– 03/07/2023</span>
+                          </div>
+                          <p>Vitae tortor condimentum lacinia quis vel eros donec ac. Nam at lectus urna duis convallis convallis</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-item d-flex">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="image-holder">
+                          <img src="images/reviewer-2.jpg" alt="review">
+                        </div>
+                      </div>
+                      <div class="col-md-7">
+                        <div class="review-content">
+                          <div class="rating-container d-flex align-items-center">
+                            <div class="rating" data-rating="1" onclick="rate(1)">
+                              <i class="icon icon-star"></i>
+                            </div>
+                            <div class="rating" data-rating="2" onclick="rate(1)">
+                              <i class="icon icon-star"></i>
+                            </div>
+                            <div class="rating" data-rating="3" onclick="rate(1)">
+                              <i class="icon icon-star"></i>
+                            </div>
+                            <div class="rating" data-rating="4" onclick="rate(1)">
+                              <i class="icon icon-star-half"></i>
+                            </div>
+                            <div class="rating" data-rating="5" onclick="rate(1)">
+                              <i class="icon icon-star-empty"></i>
+                            </div>
+                            <span class="rating-count">(3.5)</span>
+                          </div>
+                          <div class="review-header">
+                            <span class="author-name">Jenny Willis</span>
+                            <span class="review-date">– 03/06/2022</span>
+                          </div>
+                          <p>Vitae tortor condimentum lacinia quis vel eros donec ac. Nam at lectus urna duis convallis convallis</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="display-7 text-dark text-uppercase mt-5">Related Products</h2>
+
+        <div class="product-row row">
+          <div class="col-md-4">
+            <div class="card product-card border-0 bg-transparent border-none link-effect">
+              <div class="card-image image-zoom">
+                <img src="images/product-thumb-1.jpg" class="img-fluid" alt="plant">
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="product-title">
+                  <a href="#">Cane plants</a>
+                </h3>
+                <a class="price" href="#" data-after="ADD TO CART"><span>$ 23.00</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card product-card border-0 bg-transparent border-none link-effect">
+              <div class="card-image image-zoom">
+                <img src="images/product-thumb-2.jpg" class="img-fluid" alt="plant">
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="product-title">
+                  <a href="#">Ficus plants</a>
+                </h3>
+                <a class="price" href="#" data-after="ADD TO CART"><span>$ 20.00</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card product-card border-0 bg-transparent border-none link-effect">
+              <div class="card-image image-zoom">
+                <img src="images/product-thumb-3.jpg" class="img-fluid" alt="plant">
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="product-title">
+                  <a href="#">Vinca vines</a>
+                </h3>
+                <a class="price" href="#" data-after="ADD TO CART"><span>$ 12.00</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+    <section id="subscribe" class="container-grid py-5 position-relative overflow-hidden">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="subscribe-content bg-dark d-flex flex-wrap justify-content-center align-items-center py-5">
+            <div class="col-md-6 col-sm-12">
+              <div class="display-header pe-3">
+                <h2 class="display-7 text-uppercase text-light">Subscribe Us Now</h2>
+                <p class="text-muted">Get latest news, updates and deals directly mailed to your inbox.</p>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-12">
+              <form class="subscription-form validate">
+                <div class="input-group flex-wrap">
+                  <input class="form-control form-control-lg rounded-start" type="email" name="EMAIL" placeholder="Your email address here" required="">
+                  <button class="btn btn-medium btn-primary text-uppercase btn-rounded-none" type="submit" name="subscribe">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="instagram" class="pt-5 overflow-hidden">
+      <div class="container-fluid">
+        <div class="row">
+            <h2 class=" text-center">Follow us on Instagram</h2>
+        </div>
+        <div class="row row-cols-5 g-0">
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-1.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-2.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-3.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-4.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-5.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-light-green position-relative">
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-md-3">
+            <div class="main-logo">
+              <img src="images/main-logo.png" logo>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5 class="widget-title pb-3">Pages</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Main Page</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Our Story</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Contact Us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">FAQ</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="widget-title pb-3">Shop</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">All Collections</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Collection</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Product Page</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="widget-title pb-3">Follow Us</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Instagram</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Facebook</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Twitter </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Pinterest</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Youtube</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom py-4 border-top">
+        <div class="container">
+          <div class="row d-flex justify-content-end">
+            <div class="col-md-6">
+              <p>© 2023 Company, Inc. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-end">
+              <p>FREE HTML by <a href="https://templatesjungle.com/" class="text-decoration-underline" target="_blank">TemplatesJungle</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

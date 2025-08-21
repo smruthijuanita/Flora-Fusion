@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FloraFusion</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;500;600;700&family=Over+the+Rainbow&display=swap" rel="stylesheet">
+    
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#header-nav">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Menu</title>
+        <path fill="currentColor" d="M4 7v2h24V7zm0 8v2h24v-2zm0 8v2h24v-2z"/>
+      </symbol>
+      <symbol id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Close</title>
+        <path fill="currentColor" d="M7.219 5.781L5.78 7.22L14.563 16L5.78 24.781l1.44 1.439L16 17.437l8.781 8.782l1.438-1.438L17.437 16l8.782-8.781L24.78 5.78L16 14.563z"/>
+      </symbol>
+      <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Search</title>
+        <path fill="currentColor" d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z" />
+      </symbol>
+      <symbol id="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>User</title>
+        <path fill="currentColor" d="M16 5c-3.855 0-7 3.145-7 7c0 2.41 1.23 4.55 3.094 5.813C8.527 19.343 6 22.883 6 27h2c0-4.43 3.57-8 8-8s8 3.57 8 8h2c0-4.117-2.527-7.656-6.094-9.188A7.024 7.024 0 0 0 23 12c0-3.855-3.145-7-7-7zm0 2c2.773 0 5 2.227 5 5s-2.227 5-5 5s-5-2.227-5-5s2.227-5 5-5z" />
+      </symbol>
+      <symbol id="like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Like</title>
+        <path fill="currentColor" d="M9.5 5C5.363 5 2 8.402 2 12.5c0 1.43.648 2.668 1.25 3.563a9.25 9.25 0 0 0 1.219 1.468L15.28 28.375l.719.719l.719-.719L27.53 17.531S30 15.355 30 12.5C30 8.402 26.637 5 22.5 5c-3.434 0-5.645 2.066-6.5 2.938C15.145 7.066 12.934 5 9.5 5zm0 2c2.988 0 5.75 2.906 5.75 2.906l.75.844l.75-.844S19.512 7 22.5 7c3.043 0 5.5 2.496 5.5 5.5c0 1.543-1.875 3.625-1.875 3.625L16 26.25L5.875 16.125s-.484-.465-.969-1.188C4.422 14.216 4 13.274 4 12.5C4 9.496 6.457 7 9.5 7z" />
+      </symbol>
+      <symbol id="shopping-bag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Shopping Cart</title>
+        <path fill="currentColor" d="M16 3c-2.746 0-5 2.254-5 5v1H6.062L6 9.938l-1 18L4.937 29h22.125L27 27.937l-1-18L25.937 9H21V8c0-2.746-2.254-5-5-5zm0 2a3 3 0 0 1 3 3v1h-6V8a3 3 0 0 1 3-3zm-8.063 6H11v3h2v-3h6v3h2v-3h3.063l.875 16H7.063z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="plus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="check" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18.71 7.21a1 1 0 0 0-1.42 0l-7.45 7.46l-3.13-3.14A1 1 0 1 0 5.29 13l3.84 3.84a1 1 0 0 0 1.42 0l8.16-8.16a1 1 0 0 0 0-1.47Z"/>
+      </symbol>
+      
+    </svg>
+
+    <header id="header-wrap" class="align-items-center position-fixed bg-white px-3">
+
+      <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid">
+          <div class="col-md-3">
+            <div class="main-logo">
+              <a href="index.html">
+                <img src="images/main-logo.png" alt="main-logo">
+              </a>
+            </div>
+          </div>
+
+          <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><svg class="menu" width="24" height="24"><use xlink:href="#menu" /></svg></button>
+          
+          <!-- off canvas -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body justify-content-end">
+
+              <div class="col-md-6">
+                <ul id="header-nav" class="navbar-nav justify-content-center d-flex flex-grow-1 list-unstyled text-uppercase">
+                  <li class="nav-item pe-5">
+                    <a href="#" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#about" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#popular-products" class="nav-link">Shop</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#recent-collections" class="nav-link">Collection</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#latest-blog" class="nav-link">Dashboard</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="home-alternative.html" class="dropdown-item" href="#scrollspyHeading3">Home v2<span class="badge bg-primary ms-2"></span></a></li>
+                      <li><a href="about.html" class="dropdown-item" href="#scrollspyHeading3">About<span class="badge bg-primary ms-2"></span></a></li>
+                      <li><a href="blog.html" class="dropdown-item" href="#scrollspyHeading4">Dashboard<span class="badge bg-primary ms-2"></span></a></li>
+                      <li><a href="single-post.html" class="dropdown-item" href="#scrollspyHeading5">Single Post<span class="badge bg-primary ms-2"></span></a></li>
+                      <li><a href="shop.html" class="dropdown-item" href="#scrollspyHeading5">Shop<span class="badge bg-primary ms-2"></span></a></li>
+                      <li><a href="single-product.html" class="dropdown-item" href="#scrollspyHeading5">Single Product<span class="badge bg-primary ms-2"></span></a></a></li>
+                      <li><a href="checkout.html" class="dropdown-item" href="#scrollspyHeading5">Checkout<span class="badge bg-primary ms-2"></span></a></a></li>
+                      <li><a href="cart.html" class="dropdown-item" href="#scrollspyHeading5">Cart<span class="badge bg-primary ms-2"></span></a></a></li>
+                                            <li><a href="contact.html" class="dropdown-item" href="#scrollspyHeading5">Contact<span class="badge bg-primary ms-2"></span></a></li>
+                      <li><a href="faq.html" class="dropdown-item" href="#scrollspyHeading5">FAQs<span class="badge bg-primary ms-2"></span></a></li>
+                      <li><a href="styles.html" class="dropdown-item" href="#scrollspyHeading5">Styles<span class="badge bg-primary ms-2"></span></a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item ">
+                    
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <!-- / off canvas -->
+
+          <div class="col-md-3">
+            <div class="right-block d-flex justify-content-end">
+              <div id="search-bar" class="border-right me-2 pe-1">
+                <form action="" autocomplete="on">
+                <input id="search" name="search" type="text" placeholder="What're we looking for ?">
+                <button type="submit">
+                  <svg class="search" width="24" height="24">
+                    <use xlink:href="#search" />
+                  </svg>
+                </button>
+                </form>
+              </div>
+              <div class="user-items d-flex gap-3">
+                <a href="#">
+                  <svg class="user" width="24" height="24"><use xlink:href="#user" /></svg>
+                </a>
+                <a href="#">
+                  <svg class="like" width="24" height="24"><use xlink:href="#like" /></svg>
+                </a>
+                <a href="cart.html">
+                  <svg class="shopping-bag" width="24" height="24"><use xlink:href="#shopping-bag" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero-section position-relative bg-light-blue py-5">
+      <div class="hero-content">
+        <div class="container">
+          <div class="row py-5 my-5">
+            <div class="text-center py-5 mt-5 no-padding-bottom">
+              <h1 class="display-2 text-uppercase text-dark">FAQs</h1>
+              <div class="breadcrumbs">
+                <span class="item">
+                  <a href="index.html">Home ></a>
+                </span>
+                <span class="item">FAQs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faqs-wrap py-5 no-padding-bottom">
+        <div class="container">
+          <div class="row g-5">
+            <main class="col-md-8">
+              <h3 class="section-title">Frequently asked questions</h3>
+              <p>Some of the most frequent questions asked by the users regarding the purchase, payment and shipment of our plants are as follows:</p>
+              <div class="page-content mt-5">
+    
+                <div class="accordion" id="accordion-box">
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="heading-one">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-one" aria-expanded="true" aria-controls="collapse-one">
+                        <h5 class="accordion-title text-uppercase">How to order products?</h5>
+                      </button>
+                    </div>
+                    <div id="collapse-one" class="accordion-collapse collapse show" aria-labelledby="heading-one">
+                      <div class="accordion-body">
+                        <div class="faqs-box">
+                          <div class="element-box margin-xsmall d-flex align-items-center">
+                            <div class="item-title">To order a product from our web application, please follow these simple steps:<br>
+                              <b>1. Browsing Products:</b> Start by browsing through our extensive collection of plants. You can explore different categories such as indoor plants, outdoor plants, flowering plants, succulents, herbs, and more. Each product listing provides detailed information about the plant, including its name, description, care instructions, and price.<br>
+                              <b>2. Adding to Cart: </b> you've found the plant you'd like to purchase, click on the product to view more details. Select the desired quantity and any additional options (such as pot size or color, if applicable), then click on the "Add to Cart" button.<br>
+                              <b>3. Viewing Cart:</b> After adding items to your cart, you can review your selections by clicking on the shopping cart icon located at the top of the page. Here, you can make any necessary changes to your order, such as updating quantities or removing items.<br>
+                              <b>4. Proceeding to Checkout:</b> When you're ready to place your order, click on the "Checkout" button in your shopping cart. You'll be guided through the checkout process, where you'll need to provide your shipping address, select a payment method, and review your order summary.<br>
+                             <b>5. Payment: </b> Choose your preferred payment method from the options available, which may include credit/debit card, PayPal, or other secure payment gateways. Follow the prompts to enter your payment details and complete the transaction.<br>
+                             <b>6. Order Confirmation:</b> Once your order has been successfully placed, you'll receive an order confirmation email containing all the details of your purchase, including the order number and estimated delivery date.<br>
+                              <b>7. Tracking Your Order: </b> You can track the status of your order at any time by logging into your account on our website. We'll also keep you updated via email regarding the progress of your order, from processing to shipping and delivery.<br>
+                              <br>If you have any questions or encounter any issues while placing your order, please don't hesitate to reach out to our customer support team for assistance. We're here to help ensure a smooth and enjoyable shopping experience for all our valued customers. </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="heading-two">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-two" aria-expanded="true" aria-controls="collapse-two">
+                        <h5 class="accordion-title text-uppercase">Can I purchase the plants in-person?</h5>
+                      </button>
+                    </div>
+                    <div id="collapse-two" class="accordion-collapse collapse" aria-labelledby="heading-two">
+                      <div class="accordion-body">
+                        <div class="faqs-box">
+                          <div class="element-box margin-xsmall d-flex align-items-center">
+                            <div class="item-title">Yes, you can certainly purchase plants in-person!<BR>We understand the importance of experiencing the beauty of plants firsthand. That's why we welcome you to visit our physical store, where you can explore our selection, receive personalized recommendations from our knowledgeable staff, and handpick the perfect plants for your home or garden. We look forward to seeing you!</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="heading-three">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-three" aria-expanded="true" aria-controls="collapse-three">
+                        <h5 class="accordion-title text-uppercase">Are there any discounts going on?</h5>
+                      </button>
+                    </div>
+                    <div id="collapse-three" class="accordion-collapse collapse" aria-labelledby="heading-three">
+                      <div class="accordion-body">
+                        <div class="faqs-box">
+                          <div class="element-box margin-xsmall d-flex align-items-center">
+                            <div class="item-title">Certainly! We currently have an ongoing discounts on selected plants. You can explore our website to discover discounted items. Keep an eye on our promotions page and subscribe to our page to stay updated on the latest discounts, offers, and upcoming sales events. Happy shopping!</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="heading-four">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-four" aria-expanded="true" aria-controls="collapse-four">
+                        <h5 class="accordion-title text-uppercase">What information do I need to provide while ordering?</h5>
+                      </button>
+                    </div>
+                    <div id="collapse-four" class="accordion-collapse collapse" aria-labelledby="heading-four">
+                      <div class="accordion-body">
+                        <div class="faqs-box">
+                          <div class="element-box margin-xsmall d-flex align-items-center">
+                            <div class="item-title">When ordering plants from our web application, it's important to provide certain information to ensure a smooth and successful transaction. Here's what you need to provide:<br>
+                              <b>Contact Information:</b> Full Name, Email Address, Phone Number.<br>
+                              <b>Shipping Address: </b> Full Shipping Address including Street Address, City, State/Province, Zip/Postal Code, and Country.<br>
+                              <b>Plant Selection:</b> Plant Name or Product Code: Specify the name or code of the plant you wish to order. If you're unsure, you can browse our catalog for available options.<br>
+                              <b>Quantity:</b> Indicate the number of plants you want to purchase.<br>
+                              <b>Delivery Date:</b> If applicable, specify any preferred delivery date or time frame.<br>
+                              <b>Special Instructions:</b> Any specific delivery instructions or special requests regarding the order (e.g., leave at the front door if no one is home).<br>
+                              <b>Payment Method:</b> Select your preferred payment method (e.g., credit card, PayPal, bank transfer).<br>
+                              <b>Billing Address:</b> If different from the shipping address, provide the full billing address.<br>
+                              <b>Account Information:</b> If you have an account on our website, ensure you're logged in before placing your order. This will help expedite the checkout process and allow you to track your order status.<br>
+                               <br>
+                               By providing the above information accurately and completely, you can help ensure that your order is processed efficiently and that your plants are delivered to you promptly and in good condition. If you have any further questions or need assistance with your order, feel free to contact our customer support team for assistance.<br>
+                        
+                              
+                               
+                              
+                              
+                              
+
+                              
+                              
+                              
+                               </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="heading-five">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-five" aria-expanded="true" aria-controls="collapse-five">
+                        <h5 class="accordion-title text-uppercase">Can I cancel my order?</h5>
+                      </button>
+                    </div>
+                    <div id="collapse-five" class="accordion-collapse collapse" aria-labelledby="heading-five">
+                      <div class="accordion-body">
+                        <div class="faqs-box">
+                          <div class="element-box margin-xsmall d-flex align-items-center">
+                            <div class="item-title">Please note that orders can only be canceled within the first 2 days of placement. Once the cancellation period has passed, our team begins processing your order for shipment, and cancellation may not be possible.<br>
+                              If you encounter any difficulties or have any questions regarding the cancellation process, please don't hesitate to contact our customer support team. We're here to assist you!</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="heading-seven">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-seven" aria-expanded="true" aria-controls="collapse-seven">
+                        <h5 class="accordion-title text-uppercase">I haven’t received my order</h5>
+                      </button>
+                    </div>
+                    <div id="collapse-seven" class="accordion-collapse collapse" aria-labelledby="heading-seven">
+                      <div class="accordion-body">
+                        <div class="faqs-box">
+                          <div class="element-box margin-xsmall d-flex align-items-center">
+                            <div class="item-title"> We apologize for any inconvenience caused by the delay in receiving your order. Please rest assured that we are here to help resolve this matter as quickly as possible. Here are the steps you can take:<br>
+                              <b>Check Order Status: </b>First, log in to your account on our website and navigate to the order history section. Here, you can check the status of your order. If the status shows that it's still in transit, it may be on its way to you.<br>
+                             <b> Verify Shipping Information: </b>Double-check the shipping address provided during checkout to ensure it's accurate and up to date. Sometimes, delays can occur due to incorrect addresses or incomplete information.<br>
+                              <b>Contact Customer Support:</b> If you've checked the order status and verified the shipping information but still haven't received your order within the expected timeframe, please don't hesitate to reach out to our customer support team. You can contact us via email at support@example.com or through our online chat feature. Our dedicated support team will investigate the issue further and provide you with assistance.<br>
+                              <b>Reshipment or Refund:</b> Depending on the circumstances, we will work with you to either reship your order promptly or provide a refund if necessary. Your satisfaction is our top priority, and we're committed to ensuring you receive your order in a timely manner.<br>
+                              <br>
+                              Again, we apologize for any inconvenience caused by the delay and appreciate your patience and understanding. If you have any further questions or concerns, please don't hesitate to contact us. </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="heading-nine">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-nine" aria-expanded="true" aria-controls="collapse-nine">
+                        <h5 class="accordion-title text-uppercase">Where is your shop located?</h5>
+                      </button>
+                    </div>
+                    <div id="collapse-nine" class="accordion-collapse collapse" aria-labelledby="heading-nine">
+                      <div class="accordion-body">
+                        <div class="faqs-box">
+                          <div class="element-box margin-xsmall d-flex align-items-center">
+                            <div class="item-title">Our shop is located at the following address:<br><br>
+
+                              12#A, FloraFusion, Greenery Street,<br>
+                              Botanical Gardens,<br>
+                              Bangalore, India.
+                              <br>
+                              We are conveniently situated in the heart of Bangalore, making it easy for plant enthusiasts to visit us and explore our wide range of plants, get expert advice, and fulfill all their plant requirements. We look forward to welcoming you to our nursery! </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+            <div class="inquiry-item col-md-4">
+              <h3 class="">Ask us anything</h3>
+              <p>Call Us +91 9812365476 or just drop us your message at <a href="mailto:contact@yourcompany.com">contact@florafusion.com</a>. You can directly message us. </p>
+              <form id="form" class="form-group flex-wrap">
+                <div class="form-input col-lg-12 d-flex mb-3">
+                  <input type="text" name="email" placeholder="Write Your Name Here" class="form-control ps-3 me-3">
+                  <input type="text" name="email" placeholder="Write Your Email Here" class="form-control ps-3">
+                </div>
+                <div class="col-lg-12 mb-3">
+                  <input type="text" name="email" placeholder="Phone Number" class="form-control ps-3">
+                </div>
+                <div class="col-lg-12 mb-3">
+                  <input type="text" name="email" placeholder="Write Your Subject Here" class="form-control ps-3">
+                </div>
+                <div class="col-lg-12 mb-3">
+                  <textarea placeholder="Write Your Message Here" class="form-control ps-3" rows="8"></textarea>
+                </div>
+                <div class="d-grid">
+                  <button class="btn btn-primary btn-lg text-uppercase btn-rounded-none">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section id="subscribe" class="container-grid py-5 position-relative overflow-hidden">
+      <div class="container">
+        <div class="row">
+          <div class="subscribe-content bg-dark d-flex flex-wrap justify-content-center align-items-center py-5">
+            <div class="col-md-6 col-sm-12">
+              <div class="display-header content-light pe-3">
+                <h2 class="display-7 text-uppercase text-light">Subscribe Us Now</h2>
+                <p>Get latest news, updates and deals directly mailed to your inbox.</p>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-12">
+              <form class="subscription-form validate">
+                <div class="input-group flex-wrap">
+                  <input class="form-control form-control-lg rounded-start" type="email" name="EMAIL" placeholder="Your email address here" required="">
+                  <button class="btn btn-medium btn-primary text-uppercase btn-rounded-none" type="submit" name="subscribe">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="instagram" class="pt-5 overflow-hidden">
+      <div class="container-fluid">
+        <div class="row">
+            <h2 class=" text-center">Follow us on Instagram</h2>
+        </div>
+        <div class="row row-cols-5 g-0">
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-1.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-2.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-3.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-4.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+          <figure class="instagram-item m-0">
+            <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <img src="images/insta-item-5.jpg" alt="instagram" class="insta-image img-fluid">
+              <div class="icon-overlay position-absolute d-flex justify-content-center">
+                <svg class="instagram">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+            </a>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-light-green position-relative">
+      <div class="pattern-overlay6">
+        <img src="images/pattern-overlay6.png" alt="pattern" class="position-absolute">
+      </div>
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-md-3">
+            <div class="main-logo">
+              <img src="images/main-logo.png" logo>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5 class="widget-title pb-3">Shop</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">All Collections</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Collection</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Product Page</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="widget-title pb-3">Follow Us</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Instagram</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Facebook</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Twitter </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Pinterest</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Youtube</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom py-4 border-top">
+        <div class="container">
+          <div class="row d-flex justify-content-end">
+            <div class="col-md-6">
+          
+            </div>
+            <div class="col-md-6 text-end">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

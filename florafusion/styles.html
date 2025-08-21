@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PlantLover - Landscaping and Gardening Bootstrap 5 HTML Template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;500;600;700&family=Over+the+Rainbow&display=swap" rel="stylesheet">
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#header-nav">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Menu</title>
+        <path fill="currentColor" d="M4 7v2h24V7zm0 8v2h24v-2zm0 8v2h24v-2z"/>
+      </symbol>
+      <symbol id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Close</title>
+        <path fill="currentColor" d="M7.219 5.781L5.78 7.22L14.563 16L5.78 24.781l1.44 1.439L16 17.437l8.781 8.782l1.438-1.438L17.437 16l8.782-8.781L24.78 5.78L16 14.563z"/>
+      </symbol>
+      <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Search</title>
+        <path fill="currentColor" d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z" />
+      </symbol>
+      <symbol id="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>User</title>
+        <path fill="currentColor" d="M16 5c-3.855 0-7 3.145-7 7c0 2.41 1.23 4.55 3.094 5.813C8.527 19.343 6 22.883 6 27h2c0-4.43 3.57-8 8-8s8 3.57 8 8h2c0-4.117-2.527-7.656-6.094-9.188A7.024 7.024 0 0 0 23 12c0-3.855-3.145-7-7-7zm0 2c2.773 0 5 2.227 5 5s-2.227 5-5 5s-5-2.227-5-5s2.227-5 5-5z" />
+      </symbol>
+      <symbol id="like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Like</title>
+        <path fill="currentColor" d="M9.5 5C5.363 5 2 8.402 2 12.5c0 1.43.648 2.668 1.25 3.563a9.25 9.25 0 0 0 1.219 1.468L15.28 28.375l.719.719l.719-.719L27.53 17.531S30 15.355 30 12.5C30 8.402 26.637 5 22.5 5c-3.434 0-5.645 2.066-6.5 2.938C15.145 7.066 12.934 5 9.5 5zm0 2c2.988 0 5.75 2.906 5.75 2.906l.75.844l.75-.844S19.512 7 22.5 7c3.043 0 5.5 2.496 5.5 5.5c0 1.543-1.875 3.625-1.875 3.625L16 26.25L5.875 16.125s-.484-.465-.969-1.188C4.422 14.216 4 13.274 4 12.5C4 9.496 6.457 7 9.5 7z" />
+      </symbol>
+      <symbol id="shopping-bag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Shopping Cart</title>
+        <path fill="currentColor" d="M16 3c-2.746 0-5 2.254-5 5v1H6.062L6 9.938l-1 18L4.937 29h22.125L27 27.937l-1-18L25.937 9H21V8c0-2.746-2.254-5-5-5zm0 2a3 3 0 0 1 3 3v1h-6V8a3 3 0 0 1 3-3zm-8.063 6H11v3h2v-3h6v3h2v-3h3.063l.875 16H7.063z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="plus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="check" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18.71 7.21a1 1 0 0 0-1.42 0l-7.45 7.46l-3.13-3.14A1 1 0 1 0 5.29 13l3.84 3.84a1 1 0 0 0 1.42 0l8.16-8.16a1 1 0 0 0 0-1.47Z"/>
+      </symbol>
+    </svg>
+
+    <header id="header-wrap" class="align-items-center position-fixed top-0 bg-white px-3">
+
+      <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid">
+          <div class="col-md-3">
+            <div class="main-logo">
+              <a href="index.html">
+                <img src="images/main-logo.png" alt="main-logo">
+              </a>
+            </div>
+          </div>
+
+          <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><svg class="menu" width="24" height="24"><use xlink:href="#menu" /></svg></button>
+          
+          <!-- off canvas -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body justify-content-end">
+
+              <div class="col-md-6">
+                <ul id="header-nav" class="navbar-nav justify-content-center d-flex flex-grow-1 list-unstyled text-uppercase">
+                  <li class="nav-item pe-5">
+                    <a href="#" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#about" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#popular-products" class="nav-link">Shop</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#recent-collections" class="nav-link">Collection</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#latest-blog" class="nav-link">Blogs</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="home-alternative.html" class="dropdown-item" href="#scrollspyHeading3">Home v2<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="about.html" class="dropdown-item" href="#scrollspyHeading3">About<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="blog.html" class="dropdown-item" href="#scrollspyHeading4">Blog<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="single-post.html" class="dropdown-item" href="#scrollspyHeading5">Single Post<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="shop.html" class="dropdown-item" href="#scrollspyHeading5">Shop<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="single-product.html" class="dropdown-item" href="#scrollspyHeading5">Single Product<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                      <li><a href="checkout.html" class="dropdown-item" href="#scrollspyHeading5">Checkout<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                      <li><a href="cart.html" class="dropdown-item" href="#scrollspyHeading5">Cart<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                                            <li><a href="contact.html" class="dropdown-item" href="#scrollspyHeading5">Contact<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="faq.html" class="dropdown-item" href="#scrollspyHeading5">FAQs<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="styles.html" class="dropdown-item" href="#scrollspyHeading5">Styles<span class="badge bg-primary ms-2">PRO</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item ">
+                    <a href="https://templatesjungle.gumroad.com/l/plantlover-bootstrap-html-template" target="_blank"  class="nav-link fw-bold">GETPRO</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <!-- / off canvas -->
+
+          <div class="col-md-3">
+            <div class="right-block d-flex justify-content-end">
+              <div id="search-bar" class="border-right me-2 pe-1">
+                <form action="" autocomplete="on">
+                <input id="search" name="search" type="text" placeholder="What're we looking for ?">
+                <button type="submit">
+                  <svg class="search" width="24" height="24">
+                    <use xlink:href="#search" />
+                  </svg>
+                </button>
+                </form>
+              </div>
+              <div class="user-items d-flex gap-3">
+                <a href="#">
+                  <svg class="user" width="24" height="24"><use xlink:href="#user" /></svg>
+                </a>
+                <a href="#">
+                  <svg class="like" width="24" height="24"><use xlink:href="#like" /></svg>
+                </a>
+                <a href="cart.html">
+                  <svg class="shopping-bag" width="24" height="24"><use xlink:href="#shopping-bag" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+
+<section id="intro" class="py-5 jarallax">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="page-title my-5 pt-5">
+					<div class="breadcrumb text-muted">
+						<span class="item"><a href="index.html">Home</a></span> &nbsp; / &nbsp; <span class="item">Styles</span>
+					</div>
+					<h2 class="display-2">HTML Elements</h2>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<img src="images/banner.jpg" class="jarallax-img">
+</section>
+
+<section class="py-5">
+	<div class="container">
+		<div class="row mb-3">
+
+			<div class="col-md-6">
+
+				<h3>Sample Heading 3</h3>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			</div>
+
+			<div class="col-md-6">
+
+				<h3>Sample Heading 3</h3>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			</div>
+		</div>
+
+		<div class="row mb-3">
+
+			<div class="col-md-4">
+
+				<h4>Sample Heading 4</h4>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			</div>
+
+			<div class="col-md-4">
+
+				<h4>Sample Heading 4</h4>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			</div>
+
+			<div class="col-md-4">
+
+				<h4>Sample Heading 4</h4>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<hr>
+				<h2>Images and Lightboxes</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<figure>
+					<img src="images/post-thumb-1.jpg">
+					<figcaption>Sample Caption</figcaption>
+				</figure>
+			</div>
+			<div class="col-md-6">
+				<figure>
+					<a href="images/post-thumb-3.jpg" title="Calm Before The Storm (One Shoe Photography Ltd.)" class="image-link"><img src="images/post-thumb-3.jpg"></a>
+					<figcaption>Opens up Lighbox Gallery</figcaption>
+				</figure>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<section class="my-3">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col">
+				<h2 class="section-title text-center mb-5">Toggles and Accordions</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+
+				<div class="accordion mb-5" id="accordionExample">
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="headingOne">
+				      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				        Accordion Item #1
+				      </button>
+				    </h2>
+				    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+				      <div class="accordion-body">
+				        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="headingTwo">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				        Accordion Item #2
+				      </button>
+				    </h2>
+				    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+				      <div class="accordion-body">
+				        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="headingThree">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				        Accordion Item #3
+				      </button>
+				    </h2>
+				    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+				      <div class="accordion-body">
+				        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+			</div>	
+		</div>
+	</div>
+</section>
+
+<section class="my-3">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Tabs and Toggles</h2>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<div class="col-md-12">
+				<blockquote><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p></blockquote>
+				<p>
+					Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p><img src="images/post-thumb-2.jpg" class="float-end">
+
+				<p><span class="dropcap">P</span>ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. <span class="highlight">Praesent dapibus, neque id cursus</span> faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+				<h3>Paragraph</h3>
+				<p>Pellentesque <strong>habitant morbi tristique senectus et netus et</strong> malesuada fames ac turpis egestas. sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis.</p>
+
+				<p>Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus <blockquote class="pullquote-right">Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</blockquote> Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. <a href="#">Quisque</a> sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<div class="col-md-6">
+				<h3>Unordered List</h3>
+				<ul>
+				   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+				   <li>Aliquam tincidunt mauris eu risus.</li>
+				   <li>Vestibulum auctor dapibus neque.</li>
+				   <li>Aliquam tincidunt mauris eu risus.</li>
+				   <li>Vestibulum auctor dapibus neque.</li>
+				</ul>
+						 
+			</div>
+			<div class="col-md-6">
+				<h3>Ordered List</h3>
+				<ol>
+				   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+				   <li>Aliquam tincidunt mauris eu risus.</li>
+				   <li>Vestibulum auctor dapibus neque.</li>
+				   <li>Aliquam tincidunt mauris eu risus.</li>
+				   <li>Vestibulum auctor dapibus neque.</li>
+				</ol>
+				
+			</div>
+		</div>
+
+		<div class="container px-4 py-5" id="icon-grid">
+
+		    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+		      <div class="col d-flex align-items-start">
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#user"></use></svg>
+		        <div>
+		          <h4 class="fw-bold mb-0">Featured title</h4>
+		          <p>Paragraph of text beneath the heading to explain the heading.</p>
+		        </div>
+		      </div>
+		      <div class="col d-flex align-items-start">
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#like"></use></svg>
+		        <div>
+		          <h4 class="fw-bold mb-0">Featured title</h4>
+		          <p>Paragraph of text beneath the heading to explain the heading.</p>
+		        </div>
+		      </div>
+		      <div class="col d-flex align-items-start">
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#search"></use></svg>
+		        <div>
+		          <h4 class="fw-bold mb-0">Featured title</h4>
+		          <p>Paragraph of text beneath the heading to explain the heading.</p>
+		        </div>
+		      </div>
+		      <div class="col d-flex align-items-start">
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#menu"></use></svg>
+		        <div>
+		          <h4 class="fw-bold mb-0">Featured title</h4>
+		          <p>Paragraph of text beneath the heading to explain the heading.</p>
+		        </div>
+		      </div>
+		      <div class="col d-flex align-items-start">
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#user"></use></svg>
+		        <div>
+		          <h4 class="fw-bold mb-0">Featured title</h4>
+		          <p>Paragraph of text beneath the heading to explain the heading.</p>
+		        </div>
+		      </div>
+		      <div class="col d-flex align-items-start">
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#like"></use></svg>
+		        <div>
+		          <h4 class="fw-bold mb-0">Featured title</h4>
+		          <p>Paragraph of text beneath the heading to explain the heading.</p>
+		        </div>
+		      </div>
+		      <div class="col d-flex align-items-start">
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#search"></use></svg>
+		        <div>
+		          <h4 class="fw-bold mb-0">Featured title</h4>
+		          <p>Paragraph of text beneath the heading to explain the heading.</p>
+		        </div>
+		      </div>
+		      <div class="col d-flex align-items-start">
+		        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#menu"></use></svg>
+		        <div>
+		          <h4 class="fw-bold mb-0">Featured title</h4>
+		          <p>Paragraph of text beneath the heading to explain the heading.</p>
+		        </div>
+		      </div>
+		    </div>
+		</div>
+
+		<div class="row my-3">
+			<hr>
+			<div class="col-md-6">
+
+				<h3>Table</h3>
+				<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">First</th>
+				      <th scope="col">Last</th>
+				      <th scope="col">Handle</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">1</th>
+				      <td>Mark</td>
+				      <td>Otto</td>
+				      <td>@mdo</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">2</th>
+				      <td>Jacob</td>
+				      <td>Thornton</td>
+				      <td>@fat</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td colspan="2">Larry the Bird</td>
+				      <td>@twitter</td>
+				    </tr>
+				  </tbody>
+				</table>
+
+			</div>
+
+			<div class="col-md-6">
+
+				<h3>Table Striped</h3>
+				<table class="table table-striped">
+				  <thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">First</th>
+				      <th scope="col">Last</th>
+				      <th scope="col">Handle</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">1</th>
+				      <td>Mark</td>
+				      <td>Otto</td>
+				      <td>@mdo</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">2</th>
+				      <td>Jacob</td>
+				      <td>Thornton</td>
+				      <td>@fat</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td colspan="2">Larry the Bird</td>
+				      <td>@twitter</td>
+				    </tr>
+				  </tbody>
+				</table>
+
+			</div>
+			
+		</div>
+
+		<div class="row my-3">
+			<div class="col-md-12">
+				<pre class="pre"><code>.some-class {
+					background-color: red;
+				}</code></pre>
+						 
+			</div>
+			
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Tabs and Toggles</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+
+				<div class="bootstrap-tabs">
+					<nav>
+					  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+					    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+					    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+					    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+					  </div>
+					</nav>
+					<div class="tab-content" id="nav-tabContent">
+					  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+					  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+					  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Ut enim ad minim veniam,
+					  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ut enim ad minim veniam,
+					  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-md-6">
+
+				<div class="accordion" id="accordionExample2">
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="headingOne">
+				      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-collapse1" aria-expanded="true" aria-controls="accordion-collapse1">
+				        Accordion Item #1
+				      </button>
+				    </h2>
+				    <div id="accordion-collapse1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
+				      <div class="accordion-body">
+				        Ut enim ad minim veniam,
+					  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="headingTwo">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-collapse2" aria-expanded="false" aria-controls="accordion-collapse2">
+				        Accordion Item #2
+				      </button>
+				    </h2>
+				    <div id="accordion-collapse2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample2">
+				      <div class="accordion-body">
+				        Ut enim ad minim veniam,
+					  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="headingThree">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-collapse3" aria-expanded="false" aria-controls="accordion-collapse3">
+				        Accordion Item #3
+				      </button>
+				    </h2>
+				    <div id="accordion-collapse3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
+				      <div class="accordion-body">
+				        Ut enim ad minim veniam,
+					  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row mt-5 mb-5">
+			<div class="col-12">
+				<h3>Button Sizes</h3>
+				<button type="button" class="btn btn-primary btn-sm">small</button>
+				<button type="button" class="btn btn-primary btn-lg">large</button>
+
+				<hr>
+
+				<h3>Button Styles</h3>
+
+				<button type="button" class="btn btn-outline-dark">Outline Dark</button>
+				<button type="button" class="btn btn-outline-primary">Outline Primary</button>
+				<button type="button" class="btn btn-outline-success rounded-pill">Outline Success Pill</button>
+				<button type="button" class="btn btn-outline-danger rounded-pill">Outline Danger Pill</button>
+
+				<hr>
+
+				<h3>Button Colors</h3>
+
+				<button type="button" class="btn btn-primary">Accent</button>
+				<button type="button" class="btn btn-secondary">Grey</button>
+				<button type="button" class="btn btn-success rounded-pill">Black Pill</button>
+				<button type="button" class="btn btn-danger rounded-pill">Common Pill</button>
+
+				<h3>Extra Large Button</h3>
+
+				<div class="d-grid">
+					<button class="btn btn-dark">Extra Large Full Width Button</button>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row mt-5 mb-5">
+			<div class="col-md-12">
+				<h2>Forms</h2>
+			</div>
+			<div class="col-md-6">
+				<!-- Standard Headings -->
+				<h1>Heading</h1>
+				<h2>Heading</h2>
+				<h3>Heading</h3>
+				<h4>Heading</h4>
+				<h5>Heading</h5>
+				<h6>Heading</h6>
+
+				<!-- Base type size -->
+				<p>The base type is 15px over 1.6 line height (24px)</p>
+
+				<!-- Other styled text tags -->
+				<strong>Bolded</strong>
+				<em>Italicized</em>
+				<a>Colored</a>
+				<u>Underlined</u>
+			</div>
+			<div class="col-md-6">
+				
+				<form name="contactform" action="contact.php" method="post" class="form-group contact-form mt-4">
+					<div class="row">
+				    	<div class="col-md-6">
+							<input type="text" minlength="2" name="name" placeholder="Name" class="form-control" required>
+						</div>
+						<div class="col-md-6">
+							<input type="email" name="email" placeholder="E-mail" class="form-control" required>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+
+							<textarea class="form-control mt-4 mb-4" name="message" placeholder="Message" style="height: 150px;" required></textarea>
+
+							<label>
+							    <input type="checkbox" required>
+							    <span class="label-body">I agree all the <a href="#">Terms and Conditions</a></span>
+							</label>
+
+							<div class="d-grid">
+								<button type="submit" name="submit" class="btn btn-dark">Submit</button>
+							</div>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+
+		<h2 class="display-6 text-center mb-4">Pricing Tables</h2>
+
+	    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+	      <div class="col">
+	        <div class="card mb-4 rounded-3 shadow-sm">
+	          <div class="card-header py-3">
+	            <h4 class="my-0 fw-normal">Free</h4>
+	          </div>
+	          <div class="card-body">
+	            <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+	            <ul class="list-unstyled mt-3 mb-4">
+	              <li>10 users included</li>
+	              <li>2 GB of storage</li>
+	              <li>Email support</li>
+	              <li>Help center access</li>
+	            </ul>
+	            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col">
+	        <div class="card mb-4 rounded-3 shadow-sm">
+	          <div class="card-header py-3">
+	            <h4 class="my-0 fw-normal">Pro</h4>
+	          </div>
+	          <div class="card-body">
+	            <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+	            <ul class="list-unstyled mt-3 mb-4">
+	              <li>20 users included</li>
+	              <li>10 GB of storage</li>
+	              <li>Priority email support</li>
+	              <li>Help center access</li>
+	            </ul>
+	            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col">
+	        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+	          <div class="card-header py-3 text-white bg-primary border-primary">
+	            <h4 class="my-0 fw-normal">Enterprise</h4>
+	          </div>
+	          <div class="card-body">
+	            <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+	            <ul class="list-unstyled mt-3 mb-4">
+	              <li>30 users included</li>
+	              <li>15 GB of storage</li>
+	              <li>Phone and email support</li>
+	              <li>Help center access</li>
+	            </ul>
+	            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	    <h2 class="display-6 text-center mb-4">Compare plans</h2>
+
+	    <div class="table-responsive mb-5">
+	      <table class="table text-center">
+	        <thead>
+	          <tr>
+	            <th style="width: 34%;"></th>
+	            <th style="width: 22%;">Free</th>
+	            <th style="width: 22%;">Pro</th>
+	            <th style="width: 22%;">Enterprise</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <tr>
+	            <th scope="row" class="text-start">Public</th>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	          </tr>
+	          <tr>
+	            <th scope="row" class="text-start">Private</th>
+	            <td></td>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	          </tr>
+	        </tbody>
+
+	        <tbody>
+	          <tr>
+	            <th scope="row" class="text-start">Permissions</th>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	          </tr>
+	          <tr>
+	            <th scope="row" class="text-start">Sharing</th>
+	            <td></td>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	          </tr>
+	          <tr>
+	            <th scope="row" class="text-start">Unlimited members</th>
+	            <td></td>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	          </tr>
+	          <tr>
+	            <th scope="row" class="text-start">Extra security</th>
+	            <td></td>
+	            <td></td>
+	            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+	          </tr>
+	        </tbody>
+	      </table>
+	    </div>
+
+	</div>
+</section>
+
+<footer class="bg-light-green position-relative">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-md-3">
+        <div class="main-logo">
+          <img src="images/main-logo.png" logo>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h5 class="widget-title pb-3">Pages</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Main Page</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Our Story</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Blog</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Contact Us</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">FAQ</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5 class="widget-title pb-3">Shop</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">All Collections</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Collection</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Product Page</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5 class="widget-title pb-3">Follow Us</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Instagram</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Facebook</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Twitter </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Pinterest</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Youtube</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom py-4 border-top">
+    <div class="container">
+      <div class="row d-flex justify-content-end">
+        <div class="col-md-10">
+          <p>© 2023 Company, Inc. All rights reserved.</p>
+        </div>
+        <div class="col-md-2">
+          <p>Design by <a href="https://templatesjungle.com/">TemplatesJungle</a>
+        </div>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

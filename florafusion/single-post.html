@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PlantLover - Landscaping and Gardening Bootstrap 5 HTML Template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;500;600;700&family=Over+the+Rainbow&display=swap" rel="stylesheet">
+    
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#header-nav">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Menu</title>
+        <path fill="currentColor" d="M4 7v2h24V7zm0 8v2h24v-2zm0 8v2h24v-2z"/>
+      </symbol>
+      <symbol id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Close</title>
+        <path fill="currentColor" d="M7.219 5.781L5.78 7.22L14.563 16L5.78 24.781l1.44 1.439L16 17.437l8.781 8.782l1.438-1.438L17.437 16l8.782-8.781L24.78 5.78L16 14.563z"/>
+      </symbol>
+      <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Search</title>
+        <path fill="currentColor" d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z" />
+      </symbol>
+      <symbol id="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>User</title>
+        <path fill="currentColor" d="M16 5c-3.855 0-7 3.145-7 7c0 2.41 1.23 4.55 3.094 5.813C8.527 19.343 6 22.883 6 27h2c0-4.43 3.57-8 8-8s8 3.57 8 8h2c0-4.117-2.527-7.656-6.094-9.188A7.024 7.024 0 0 0 23 12c0-3.855-3.145-7-7-7zm0 2c2.773 0 5 2.227 5 5s-2.227 5-5 5s-5-2.227-5-5s2.227-5 5-5z" />
+      </symbol>
+      <symbol id="like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Like</title>
+        <path fill="currentColor" d="M9.5 5C5.363 5 2 8.402 2 12.5c0 1.43.648 2.668 1.25 3.563a9.25 9.25 0 0 0 1.219 1.468L15.28 28.375l.719.719l.719-.719L27.53 17.531S30 15.355 30 12.5C30 8.402 26.637 5 22.5 5c-3.434 0-5.645 2.066-6.5 2.938C15.145 7.066 12.934 5 9.5 5zm0 2c2.988 0 5.75 2.906 5.75 2.906l.75.844l.75-.844S19.512 7 22.5 7c3.043 0 5.5 2.496 5.5 5.5c0 1.543-1.875 3.625-1.875 3.625L16 26.25L5.875 16.125s-.484-.465-.969-1.188C4.422 14.216 4 13.274 4 12.5C4 9.496 6.457 7 9.5 7z" />
+      </symbol>
+      <symbol id="shopping-bag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Shopping Cart</title>
+        <path fill="currentColor" d="M16 3c-2.746 0-5 2.254-5 5v1H6.062L6 9.938l-1 18L4.937 29h22.125L27 27.937l-1-18L25.937 9H21V8c0-2.746-2.254-5-5-5zm0 2a3 3 0 0 1 3 3v1h-6V8a3 3 0 0 1 3-3zm-8.063 6H11v3h2v-3h6v3h2v-3h3.063l.875 16H7.063z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="plus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="check" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18.71 7.21a1 1 0 0 0-1.42 0l-7.45 7.46l-3.13-3.14A1 1 0 1 0 5.29 13l3.84 3.84a1 1 0 0 0 1.42 0l8.16-8.16a1 1 0 0 0 0-1.47Z"/>
+      </symbol>
+    </svg>
+
+    <header id="header-wrap" class="align-items-center position-sticky top-0 bg-white px-3">
+
+      <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid">
+          <div class="col-md-3">
+            <div class="main-logo">
+              <a href="index.html">
+                <img src="images/main-logo.png" alt="main-logo">
+              </a>
+            </div>
+          </div>
+
+          <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><svg class="menu" width="24" height="24"><use xlink:href="#menu" /></svg></button>
+          
+          <!-- off canvas -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body justify-content-end">
+
+              <div class="col-md-6">
+                <ul id="header-nav" class="navbar-nav justify-content-center d-flex flex-grow-1 list-unstyled text-uppercase">
+                  <li class="nav-item pe-5">
+                    <a href="#" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#about" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#popular-products" class="nav-link">Shop</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#recent-collections" class="nav-link">Collection</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#latest-blog" class="nav-link">Blogs</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="home-alternative.html" class="dropdown-item" href="#scrollspyHeading3">Home v2<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="about.html" class="dropdown-item" href="#scrollspyHeading3">About<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="blog.html" class="dropdown-item" href="#scrollspyHeading4">Blog<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="single-post.html" class="dropdown-item" href="#scrollspyHeading5">Single Post<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="shop.html" class="dropdown-item" href="#scrollspyHeading5">Shop<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="single-product.html" class="dropdown-item" href="#scrollspyHeading5">Single Product<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                      <li><a href="checkout.html" class="dropdown-item" href="#scrollspyHeading5">Checkout<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                      <li><a href="cart.html" class="dropdown-item" href="#scrollspyHeading5">Cart<span class="badge bg-primary ms-2">PRO</span></a></a></li>
+                                            <li><a href="contact.html" class="dropdown-item" href="#scrollspyHeading5">Contact<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="faq.html" class="dropdown-item" href="#scrollspyHeading5">FAQs<span class="badge bg-primary ms-2">PRO</span></a></li>
+                      <li><a href="styles.html" class="dropdown-item" href="#scrollspyHeading5">Styles<span class="badge bg-primary ms-2">PRO</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item ">
+                    <a href="https://templatesjungle.gumroad.com/l/plantlover-bootstrap-html-template" target="_blank" class="nav-link fw-bold">GETPRO</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <!-- / off canvas -->
+
+          <div class="col-md-3">
+            <div class="right-block d-flex justify-content-end">
+              <div id="search-bar" class="border-right me-2 pe-1">
+                <form action="" autocomplete="on">
+                <input id="search" name="search" type="text" placeholder="What're we looking for ?">
+                <button type="submit">
+                  <svg class="search" width="24" height="24">
+                    <use xlink:href="#search" />
+                  </svg>
+                </button>
+                </form>
+              </div>
+              <div class="user-items d-flex gap-3">
+                <a href="#">
+                  <svg class="user" width="24" height="24"><use xlink:href="#user" /></svg>
+                </a>
+                <a href="#">
+                  <svg class="like" width="24" height="24"><use xlink:href="#like" /></svg>
+                </a>
+                <a href="cart.html">
+                  <svg class="shopping-bag" width="24" height="24"><use xlink:href="#shopping-bag" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+    
+    <div class="post-wrap py-5 overflow-hidden">
+      <div class="container">
+        <div class="row">
+          <main class="post-grid">
+            <div class="row">
+              <article class="post-item mt-5">
+                <div class="post-content">
+                  <div class="post-meta text-uppercase">
+                    <span class="post-category">Feb 22, 2023  </span> / <span class="meta-date">-  technology</span>
+                  </div>
+                  <h1 class="post-title">Grow these 5 Awesome Indoor Plants with an ease</h1>
+                  <div class="hero-image col-lg-12 mt-5">
+                    <img src="images/post-large.jpg" alt="single-post" class="img-fluid">
+                  </div>
+                  <div class="post-description review-item py-5">
+                    <p>
+                      <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur facilisis vivamus massa magna. Blandit mauris libero condimentum commodo morbi consectetur sociis convallis sit. Magna diam amet justo sed vel dolor et volutpat integer. Iaculis sit sapien hac odio elementum egestas neque. Adipiscing purus euismod orci sem amet, et. Turpis erat ornare nisi laoreet est euismod.</strong>
+                    </p>
+                    <p>Sit suscipit tortor turpis sed fringilla lectus facilisis amet. Ipsum, amet dolor curabitur non aliquet orci urna volutpat. Id aliquam neque, ut vivamus sit imperdiet enim, lacus, vel. Morbi arcu amet, nulla fermentum vitae mattis arcu mi convallis. Urna in sollicitudin in vestibulum erat. Turpis faucibus augue ipsum, at aliquam. Cras sagittis tellus nunc integer vitae neque bibendum eget. Tempus malesuada et pellentesque maecenas. Sociis porttitor elit tincidunt tellus sit ornare. Purus ut quis sed venenatis eget ut ipsum, enim lacus. Praesent imperdiet vitae eu, eu tincidunt nunc integer sit.</p>
+                    <blockquote>“Sit suscipit tortor turpis sed fringilla lectus facilisis amet. Ipsum, amet dolor curabitur non aliquet orci urna volutpat. Id aliquam neque, ut vivamus sit imperdiet enim, lacus, vel.</blockquote>
+                    <p>
+                      <strong>Are you amazed ?</strong>
+                    </p>
+                    <ul style="list-style-type:disc;" class="inner-list">
+                      <li>Blandit mauris libero condimentum commodo sociis convallis sit.</li>
+                      <li>Magna diam amet justo sed vel dolor et volutpat integer.</li>
+                      <li>Laculis sit sapien hac odio elementum egestas neque.</li>
+                    </ul>
+                    <p>Morbi arcu amet, nulla fermentum vitae mattis arcu mi convallis. Urna in sollicitudin in vestibulum erat. Turpis faucibus augue ipsum, at aliquam. Cras sagittis tellus nunc integer vitae neque bibendum eget. Tempus malesuada et pellentesque maecenas. Sociis porttitor elit tincidunt tellus sit ornare. Purus ut ipsum, enim lacus. Praesent imperdiet vitae eu, eu tincidunt nunc integer sit.</p>
+                    <p>Tortor diam dignissim amet, in interdum aliquet. Magnis dictum et eros purus fermentum, massa ullamcorper sit sollicitudin. Nascetur libero elementum adipiscing mauris maecenas et magna. Etiam nec, rutrum a diam lacus, nunc integer etiam. Mattis pulvinar non viverra donec pellentesque. Odio mi consequat libero dolor. Porta ut diam lobortis eget leo, lectus. Nunc tempus feugiat massa laoreet ultrices diam magna quam. Congue auctor auctor luctus neque. Enim lorem ultrices diam donec. Sed id placerat consectetur faucibus.</p>
+                    <img src="images/post-thumb-1.jpg" alt="image" class="img-fluid ">
+                    <img src="images/post-thumb-2.jpg" alt="image" class="img-fluid ">
+                    <img src="images/post-thumb-3.jpg" alt="image" class="img-fluid ">
+                    <p>
+                      <strong>Velit, praesent pharetra malesuada</strong>
+                    </p>
+                    <p>Id pulvinar amet. Consequat potenti mollis massa iaculis et, dolor, eget lectus. Aliquam pellentesque molestie felis fames sed eget non euismod eget. Et eget ullamcorper urna, elit ac diam tellus viverra lacus.</p>
+                    <p>Tortor diam dignissim amet, in interdum aliquet. Magnis dictum et eros purus fermentum, massa ullamcorper sit sollicitudin. Nascetur libero elementum adipiscing mauris maecenas et magna. Etiam nec, rutrum a diam lacus, nunc integer etiam. Mattis pulvinar non viverra donec pellentesque. Odio mi consequat libero dolor. Porta ut diam lobortis eget leo, lectus.</p>
+                    <p>Velit, praesent pharetra malesuada id pulvinar amet. Consequat potenti mollis massa iaculis et, dolor, eget lectus. Aliquam pellentesque molestie felis fames sed eget non euismod eget. Et eget ullamcorper urna, elit ac diam tellus viverra lacus.</p>
+                    <p>Tortor diam dignissim amet, in interdum aliquet. Magnis dictum et eros purus fermentum, massa ullamcorper sit sollicitudin. Nascetur libero elementum adipiscing mauris maecenas et magna. Etiam nec, rutrum a diam lacus, nunc integer etiam. Mattis pulvinar non viverra donec pellentesque. Odio mi consequat libero dolor. Porta ut diam lobortis eget leo, lectus.</p>
+                    <p>Praesent pharetra malesuada id pulvinar amet. Consequat potenti mollis massa iaculis et, dolor, eget lectus. Aliquam pellentesque molestie felis fames sed eget non euismod eget. Et eget ullamcorper urna, elit ac diam tellus viverra lacus.</p>
+                    <p>Tortor diam dignissim amet, in interdum aliquet. Magnis dictum et eros purus fermentum, massa ullamcorper sit sollicitudin. Nascetur libero elementum adipiscing mauris maecenas et magna. Etiam nec, rutrum a diam lacus, nunc integer etiam. Mattis pulvinar non viverra donec pellentesque. Odio mi consequat libero dolor. Porta ut diam lobortis eget leo, lectus.</p>
+
+                    <div class="post-tags">
+                      <div class="block-tag col-md-12">
+                        <ul class="list-unstyled d-flex">
+                          <li class="pe-3">
+                            <a href="#" class="btn btn-dark btn-small text-uppercase btn-rounded">Tips</a>
+                          </li>
+                          <li class="pe-3">
+                            <a href="#" class="btn btn-dark btn-small text-uppercase btn-rounded">Plant Hacks</a>
+                          </li>
+                          <li class="pe-3">
+                            <a href="#" class="btn btn-dark btn-small text-uppercase btn-rounded">indoor</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="single-post-navigation" class="mb-5">
+                    <div class="post-navigation d-flex flex-wrap align-items-center justify-content-between">
+                      <a itemprop="url" class="post-prev d-flex flex-column" href="#" title="Previous Post">
+                        <span class="text-muted">Previous</span>
+                        <h3 class="page-nav-title">Get some cool plants for 2023</h3>
+                      </a>
+                      <a itemprop="url" class="post-next d-flex flex-column" href="#" title="Next Post">
+                        <span class="text-muted">Next</span>
+                        <h3 class="page-nav-title">Check out these 10 Cute little Plants</h3>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              </article>
+
+              <!-- comments -->
+              <section id="post-comment">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="comments-wrap">
+                        <h2 class="display-6 fw-normal text-dark text-uppercase">
+                          <span class="count">3</span> Comments
+                        </h2>
+                        <div class="comment-list padding-small">
+                          <article class="comment-item d-flex flex-wrap mb-3">
+                            <div class="col-lg-1 col-sm-3 me-4 mb-3">
+                              <img src="images/reviewer-1.jpg" alt="default" class="img-fluid img-circle">
+                            </div>
+                            <div class="col-lg-10 col-sm-9 author-wrap">
+                              <div class="author-post">
+                                <div class="comment-meta d-flex">
+                                  <h4 class="author-name text-dark pe-1">Sam Smith</h4>
+                                  <span class="meta-date text-muted">Jul 10</span>
+                                </div>
+                                <p class="no-margin">Mattis pulvinar non viverra donec pellentesque. Odio mi consequat libero dolor. Porta ut diam lobortis eget leo, lectus. Tortor diam dignissim amet, in interdum aliquet. Nascetur libero elementum adipiscing mauris maecenas et magna.</p>
+                                <div class="comments-reply">
+                                  <a href="#" class="text-decoration-underline text-dark">Reply Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          </article>
+                          <article class="comment-item d-flex child-comments flex-wrap ps-5 mb-3">
+                            <div class="col-lg-1 col-sm-3 me-4 mb-3">
+                              <img src="images/reviewer-2.jpg" alt="default" class="img-fluid img-circle">
+                            </div>
+                            <div class="col-lg-10 col-sm-9 author-wrap">
+                              <div class="author-post">
+                                <div class="comment-meta d-flex">
+                                  <h4 class="author-name text-dark pe-1">Santie Mary</h4>
+                                  <span class="meta-date text-muted">Jul 10</span>
+                                </div>
+                                <p class="no-margin">Tristique tempis condimentum diam done ullancomroer sit element henddg sit he consequert.Tristique tempis condimentum diam done ullancomroer sit element henddg sit he consequert.</p>
+                                <div class="comments-reply">
+                                  <a href="#" class="text-decoration-underline text-dark">Reply Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          </article>
+                          <article class="comment-item d-flex flex-wrap">
+                            <div class="col-lg-1 col-sm-3 me-4 mb-3">
+                              <img src="images/reviewer-3.jpg" alt="default" class="img-fluid img-circle">
+                            </div>
+                            <div class="col-lg-10 col-sm-9 author-wrap">
+                              <div class="author-post">
+                                <div class="comment-meta d-flex">
+                                  <h4 class="author-name text-dark pe-1">Analisa Nora</h4>
+                                  <span class="meta-date text-muted">Jul 10</span>
+                                </div>
+                                <p class="no-margin">Tristique tempis condimentum diam done ullancomroer sit element henddg sit he consequert.Tristique tempis condimentum diam done ullancomroer sit element henddg sit he consequert.</p>
+                                <div class="comments-reply">
+                                  <a href="#" class="text-decoration-underline text-dark">Reply Now</a>
+                                </div>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                      <div class="comment-respond mt-3">
+                        <h2 class="display-6 fw-normal text-dark text-uppercase">Leave a Comment</h2>
+                        <form method="post" class="form-group padding-small">
+                        <p>Your email address will not be published. Required fields are marked *</p>
+                          <div class="row">
+                            <div class="col-lg-12 mb-3">
+                              <textarea class="form-control ps-3 pt-3" id="comment" name="comment" placeholder="Write your comment here *"></textarea>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                              <input class="form-control ps-3" type="text" name="author" id="author" placeholder="Write your full name here *">
+                            </div>
+                            <div class="col-lg-6">
+                              <input class="form-control ps-3" type="email" name="email" id="email" placeholder="Write your e-mail address *">
+                            </div>
+                            <div class="col-lg-12">
+                              <label class="d-flex align-items-center">
+                                <input type="checkbox" class="checked-box me-2">
+                                <span class="label-body">Save my name, email, and website in this browser for the next time.</span>
+                              </label>
+                            </div>
+                            <div class="col-lg-12 mt-3">
+                              <button class="btn btn-medium btn-black text-uppercase btn-rounded-none" type="submit">Post Comment </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- / comments -->
+
+
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!-- related posts -->
+    <section id="related-posts" class="py-5 no-padding-top">
+      <div class="container">
+        <div class="row">
+          <div class="display-header d-flex justify-content-between pb-3">
+            <h2 class="display-7 text-dark text-uppercase">Related Posts</h2>
+            <div class="btn-right">
+              <a href="#" class="btn btn-medium btn-normal text-uppercase">Read Blog</a>
+            </div>
+          </div>
+          <div class="post-grid d-flex flex-wrap justify-content-between">
+            <div class="col-lg-4 col-sm-12 pe-3">
+              <div class="card border-0">
+                <div class="card-image">
+                  <img src="images/post-thumb-1.jpg" alt="" class="img-fluid">
+                </div>
+              </div>
+              <div class="card-body text-uppercase">
+                <div class="card-meta text-muted">
+                  <span class="meta-date">feb 22, 2023</span>
+                  <span class="meta-category">- Collection</span>
+                </div>
+                <h3 class="card-title">
+                  <a href="#">Get some cool plants in 2023</a>
+                </h3>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 pe-3">
+              <div class="card border-0">
+                <div class="card-image">
+                  <img src="images/post-thumb-2.jpg" alt="" class="img-fluid">
+                </div>
+              </div>
+              <div class="card-body text-uppercase">
+                <div class="card-meta text-muted">
+                  <span class="meta-date">feb 25, 2023</span>
+                  <span class="meta-category">- Tips</span>
+                </div>
+                <h3 class="card-title">
+                  <a href="#">Plant Care Hacks You Won't Get</a>
+                </h3>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 pe-3">
+              <div class="card border-0">
+                <div class="card-image">
+                  <img src="images/post-thumb-3.jpg" alt="" class="img-fluid">
+                </div>
+              </div>
+              <div class="card-body text-uppercase">
+                <div class="card-meta text-muted">
+                  <span class="meta-date">feb 22, 2023</span>
+                  <span class="meta-category">- Camera</span>
+                </div>
+                <h3 class="card-title">
+                  <a href="#">Top 10 Small Camera In The World</a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / related posts -->
+
+    <footer class="bg-light-green position-relative">
+      <div class="pattern-overlay6">
+        <img src="images/pattern-overlay6.png" alt="pattern" class="position-absolute">
+      </div>
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-md-3">
+            <div class="main-logo">
+              <img src="images/main-logo.png" logo>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5 class="widget-title pb-3">Pages</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Main Page</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Our Story</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Contact Us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">FAQ</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="widget-title pb-3">Shop</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">All Collections</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Collection</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Product Page</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="widget-title pb-3">Follow Us</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Instagram</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Facebook</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Twitter </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Pinterest</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Youtube</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom py-4 border-top">
+        <div class="container">
+          <div class="row d-flex justify-content-end">
+            <div class="col-md-6">
+              <p>© 2023 Company, Inc. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-end">
+              <p>FREE HTML by <a href="https://templatesjungle.com/" class="text-decoration-underline" target="_blank">TemplatesJungle</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

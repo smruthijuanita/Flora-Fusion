@@ -1,0 +1,680 @@
+/*
+Theme Name: Plant Lover
+Theme URI: 
+Author: 
+Author URI: 
+Description: Plant Lover is specially designed for Plant store by TemplatesJungle.
+Version: 
+*/
+
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
+
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+
+/*------------------------------------------------
+
+CSS STRUCTURE:
+
+    
+/*--------------------------------------------------------------
+/** 1. VARIABLES
+--------------------------------------------------------------*/
+:root {
+  --accent-color:         #6DAD84;
+  --white-color:          #fff;
+  --gray-color:           #F3F3F3;
+  --dark-gray-color:      #4C544F;
+  --primary-color:        #6DAD84;
+  --secondary-color:      #6c757d;
+  --light-color:          #f8f9fa;
+  --dark-color:           #212529;
+  --body-bg-color:        #fff;
+  --light-green-color:    #E6EDE4;
+  --navbar-color-color:   #131814;
+
+
+}
+
+/* on mobile devices below 600px
+ */
+@media screen and (max-width: 600px) {
+    :root {
+        --header-height : 100px;
+        --header-height-min   : 80px;
+    }
+}
+
+/* Fonts */
+:root {
+    --body-font           : "Inter", sans-serif;
+    --heading-font        : "Inter", sans-serif;
+    --extra-font          : "Over The Rainbow", sans-serif;
+}
+
+
+/*----------------------------------------------*/
+/* 1 GENERAL TYPOGRAPHY */
+/*----------------------------------------------*/
+
+/* 1.1 General Styles
+/*----------------------------------------------*/
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--body-font);
+  /* font-size: 14px;
+  font-weight: 500; 
+  line-height: 2;
+  color: var(--accent-color);
+  margin: 0;*/
+}
+a {
+  color: var(--dark-color);
+  text-decoration: none;
+  transition: 0.3s color ease-out;
+}
+a.light {
+  color: var(--light-color);
+}
+a:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.content-light,
+.content-light h2,
+.content-light a,
+.content-light a:hover {
+  color: #fff;
+}
+
+/*----------------------------------------------*/
+/* 1. Section */
+/*-----------------------------------------------------------*/
+.intro-text {
+    color: #4c544f;
+    font-size: 13em;
+    font-size: calc(3.625rem + 5.5vw);
+    font-weight: 900;
+    letter-spacing: -10px;
+    line-height: 0.8em;
+}
+@media screen and (max-width: 768px) {
+  .intro-text {
+    font-size: calc(3.625rem + 1.5vw);
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1.4em;
+  }
+}
+
+/*------------ Section Title -----------*/
+.section-title {
+    font-family: var(--heading-font);
+    font-size: 3.5em;
+    line-height: 1.3;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+.sub-title {
+    font-family: var(--extra-font);
+    font-size: 2.9em;
+    line-height: 1.3;    
+}
+.product-title {
+    font-family: var(--heading-font);
+    font-size: 2.3em;
+    line-height: 1.3;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+/*------------ Background Color -----------*/
+.bg-gray {
+    background: var(--gray-color);
+}
+.bg-dark-gray {
+    background: var(--dark-gray-color);
+}
+.bg-light-green {
+    background: var(--light-green-color);
+}
+.bg-dark {
+    background: var(--dark-color);
+}
+.bg-light {
+    background: var(--light-color);
+}
+
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
+
+/*----------------------------------------------*/
+/* 2 SITE STRUCTURE */
+/*----------------------------------------------*/
+
+/* - Search Bar
+------------------------------------------------------------- */
+#search-bar {
+  position: relative;
+}
+#search-bar input[type="text"] {
+  font-size: 15px;
+  color: var(--dark-gray-color);
+  height: 30px;
+  display: inline-block;
+  border: none;
+  outline: none;
+  padding-right: 60px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+#search-bar input[type="text"]:focus:hover {
+  border-bottom: 1px solid #000;
+}
+#search-bar input[type="text"]:focus {
+  width: 250px;
+  z-index: 1;
+  border-bottom: 1px solid #000;
+  cursor: text;
+}
+#search-bar button {
+  background: transparent;
+  border: none;
+}
+
+/*------------ Pattern Overlay -----------*/
+.pattern-overlay img.position-absolute {
+    bottom: -50px;
+    right: 0;
+}
+.pattern-overlay1 img.position-absolute {
+    bottom: -100px;
+    left: 0;
+}
+.pattern-overlay2 img.position-absolute {
+    top: 140px;
+    left: calc( 50% - 850px );
+}
+.pattern-overlay3 img.position-absolute {
+    top: 0;
+    right: 0;
+}
+.pattern-overlay4 img.position-absolute {
+    top: 0;
+    left: 0;
+}
+.pattern-overlay5 img.position-absolute {
+    top: 0;
+    right: 0;
+}
+.pattern-overlay6 img.position-absolute {
+    top: -187px;
+    right: 0;
+}
+/* BG patterns */
+.bg-pattern-6 {
+  background-image: url(images/pattern-overlay6.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+/* 2.1 Header
+/*----------------------------------------------*/
+/*------------ Navigation -----------*/
+#header-wrap {
+  width: 100%;
+  z-index: 10;
+  transition: background 0.3s ease-out;
+}
+
+/*------------ Icons -----------*/
+button svg {
+  color: var(--dark-color);
+}
+.right-block .search-box {
+    border-right: 1px solid var(--accent-color);
+}
+
+
+/* dropdown  */
+.dropdown-item.active, .dropdown-item:active {
+  color: var(--dark-color);
+  text-decoration: none;
+  background-color: var(--body-bg-color);
+}
+
+/* 3. Billboard
+/*----------------------------------------------*/
+
+/*------------ Icon Box -----------*/
+#billboard .icon-box .box-title {
+   font-family: var(--body-font);
+   font-size: 1.4em;
+   color: var(--gray-dark-color);
+}
+#billboard .icon-box p,
+#billboard .icon-box .icon-number span {
+   font-family: var(--body-font);
+   font-size: 1.1em;
+}
+#billboard .icon-box p {
+   line-height: 1.5;
+}
+#billboard .icon-box .icon-number {
+    width: 60px;
+    height: 60px;
+}
+#billboard .icon-box .icon-content {
+    width: 70%;
+}
+
+
+/* 4. Featured Products
+/*----------------------------------------------*/
+#featured-products img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.product-position .card-body {
+    right: 0;
+    bottom: 70px;
+    left: 70px;
+}
+.product-position .card-body h2.section-title {
+    width: 350px;
+}
+@media screen and (max-width: 768px) {
+  .product-position .card-body {
+    bottom: 10px;
+    left: 20px;
+  }
+}
+
+/* 4. Most Popular Products
+/*----------------------------------------------*/
+.product-card {
+  cursor: pointer;
+}
+.product-card .card-image {
+  margin-bottom: 20px;
+}
+.product-card .price {
+  font-size: 19px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #3D713C;
+  flex-basis: 140px;
+  text-align: right;
+}
+/* override link effect */
+.product-card .price::after {
+ right: 0;
+ font-size: 16px;
+}
+/* Image zoom effect on hover */
+.image-zoom {
+  overflow: hidden;
+}
+.image-zoom img {
+  transition: transform 0.3s ease-out;
+}
+.image-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* Link Effect
+ - Place anywhere you want your link to animate
+ - Add data-after="Any text" to the link within the class
+ - Use span within the anchor tag for the effect to work
+------------------------------------------------------------- */
+.link-effect a {
+   position: relative;
+   padding: 0;
+   overflow: hidden;
+   transition: transform 0.5s;
+   display: block;
+}
+ .link-effect a::after {
+   content: attr(data-after);
+   display: inline-block;
+   transform: translateY(100%);
+   position: absolute;
+   left: 0;
+   text-align: inherit;
+   transition: inherit;
+}
+ .link-effect a > span {
+   display: inline-block;
+   transform: translateY(0%);
+   transition: inherit;
+}
+ .link-effect:hover a > span {
+   transform: translateY(-100%);
+}
+ .link-effect:hover a::after {
+   transform: translateY(0%);
+}
+
+/* 5. Subscribe
+/*----------------------------------------------*/
+.subscription-form input.form-control {
+    border: none;
+    border-radius: 0;
+    padding-left: 25px;
+}
+
+/* 7. Footer
+/*----------------------------------------------*/
+footer h5.widget-title {
+    font-size: 1.8em;
+    color: var(--dark-color);
+}
+footer li.nav-item {
+    font-size: 1.2em;
+}
+
+/* widget-search-bar */
+.widget-search-bar svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* Bootstrap theme override 
+--------------------------------------------------------------*/
+.accordion-button:not(.collapsed) {
+    color: var(--dark-color);
+    background-color: transparent;
+    box-shadow: none;
+}
+.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link.active {
+  border-color: transparent;
+}
+.tab-content {
+  padding: 20px 0;
+}
+.accordion-button:focus {
+  border-color: var(--grey-color);
+  box-shadow: none;
+}
+.accordion-item {
+  border-left: 0;
+  border-right: 0;
+}
+
+/* primary button */
+.text-primary,
+.link-primary {
+  color: var(--primary-color);
+}
+.link-primary:focus, .link-primary:hover {
+  color: var(--secondary-color);
+}
+.btn {
+  font-weight: bold;
+}
+.btn-link,
+.btn-link:hover {
+  color: var(--dark-color);
+}
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--dark-color);
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: var(--dark-color);
+  border-color: var(--dark-color);
+}
+.btn-outline-primary {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+.border-primary {
+  border-color: var(--accent-color) !important;
+}
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: var(--accent-color) !important;
+}
+.bg-dark {
+    background-color: var(--dark-color) !important;
+}
+.bg-grey {
+    background-color: var(--grey-color) !important;
+}
+.text-white .border-top {
+    border-top: 1px solid #3b3e42!important;
+}
+
+/* blockquote */
+.blockquote {
+  padding: 100px;
+  background-color: var(--secondary-color);
+  margin: 0;
+}
+.blockquote p {
+  font-size: 28px;
+  line-height: 150%;
+  color: #092035;
+}
+.blockquote cite {
+  font-size: 18px;
+  margin-top: 27px;
+}
+
+@media (max-width: 768px) {
+  .blockquote {
+    padding: 40px;
+  }
+}
+
+/* display text */
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+  font-weight: 700;
+}
+.display-2 em {
+  color: var(--accent-color);
+}
+a:hover {
+  color: var(--accent-color);
+}
+
+/* nav-link active */
+.nav-link {
+  color: #333;
+  position: relative;
+}
+.nav-link:not(.dropdown-toggle):after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  transition: width 0.3s ease-out;
+}
+.nav-link:focus,
+.nav-link:hover,
+.nav-link.active {
+  color: var(--dark-color);
+}
+.nav-link.active:after {
+  width: 100%;
+}
+
+/* list group */
+.list-group-item {
+  color: var(--dark-color);
+}
+
+/* section header */
+section header h2 {
+  font-weight: 400;
+  font-size: 2.1em;
+}
+section header .text-muted {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 180%;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+/* image circle */
+.img-circle {
+  border-radius: 50%;
+}
+
+/* single product */
+.product-detail .thumb-swiper .swiper-slide {
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+.product-detail .large-swiper .swiper-slide {
+    padding-left: 15px;
+}
+
+/*--Product Information ----------*/
+.rating-container .rating {
+    font-size: 1.5em;
+    padding-right: 5px;
+    color: var(--dark-color);
+}
+.single-product .product-info h3.product-title,
+.product-info .product-price strong {
+    font-size: 2.3em;
+    padding-right: 10px;
+}
+.product-info .product-price del {
+    color: var(--dark-grey-color);
+}
+.product-info .product-select h4.item-title {
+    font-size: 1.4em;
+    text-decoration: underline;
+}
+.select-list li.select-item {
+    font-size: 1.2em;
+    padding-right: 20px;
+}
+.select-list li.select-item a {
+    color: var(--dark-grey-color);
+}
+.select-list li.select-item a:hover {
+    color: var(--dark-color);
+    text-decoration: underline;
+}
+
+/* ------ Qunatity ------*/
+.product-quantity .qty-number {
+    margin-right: 20px;
+}
+.qty-number .quntity-button{
+    min-width: 40px;
+    height: 40px;
+    font-size: 1.8em;
+    line-height: 1.5;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--accent-dim-color);
+    transition: .5s all ease-in-out;
+}
+.qty-number .quntity-button:hover{
+    background-color: var(--accent-lit-color);
+}
+.qty-number input{
+    font-size: 1.4em;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border-radius: 0;
+    border: 1px solid var(--dark-color);
+}
+.qty-field .regular-price{
+    display: none;
+}
+
+
+/* ------ Button ------*/
+.stock-button-wrap .like-button {
+    margin-left: 20px;
+}
+.stock-button-wrap .like-button a {
+    padding: 6px 12px;
+}
+.stock-button-wrap .like-button i.icon {
+    font-size: 1.6em;
+}
+/* ------ Meta Item ------*/
+.meta-product .meta-item h4.item-title {
+    padding-right: 8px;
+}
+
+/* product-thumbnail-slider */
+.product-thumbnail-slider {
+  height: 580px;
+}
+.product-thumbnail-slider .swiper-slide {
+  height: 200px;
+}
+
+/* ------ Quantity ------*/
+.quantity-output {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--dark-color);
+}
+.qty-number .incriment-button,
+.qty-number .decriment-button{
+  min-width: 50px;
+  height: 50px;
+  text-align: center;
+  border: 2px solid var(--grey-color);
+  line-height: 50px;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+}
+.qty-number input{
+  width: 55px;
+  height: 50px;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 0;
+  border: 2px solid var(--grey-color);
+}
+.qty-field .regular-price{
+  display: none;
+}
